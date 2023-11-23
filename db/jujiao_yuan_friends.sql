@@ -1,0 +1,5 @@
+INSERT INTO jujiao_yuan.friends (id, fromId, receiveId, isRead, status, createTime, updateTime, isDelete, remark) VALUES (1, 10003, 10002, 1, 1, '2023-11-05 21:54:43', '2023-11-05 21:54:42', 0, '111');
+INSERT INTO jujiao_yuan.friends (id, fromId, receiveId, isRead, status, createTime, updateTime, isDelete, remark) VALUES (2, 10003, 10004, 1, 1, '2023-11-18 20:34:24', '2023-11-18 20:34:23', 0, '我是admin');
+INSERT INTO jujiao_yuan.friends (id, fromId, receiveId, isRead, status, createTime, updateTime, isDelete, remark) VALUES (3, 10003, 10004, 1, 1, '2023-11-18 20:48:20', '2023-11-18 20:48:19', 0, '111');
+INSERT INTO jujiao_yuan.friends (id, fromId, receiveId, isRead, status, createTime, updateTime, isDelete, remark) VALUES (4, 10004, 10003, 1, 2, '2023-11-18 21:08:27', '2023-11-18 21:08:27', 0, '我是LYC1');
+INSERT INTO jujiao_yuan.friends (id, fromId, receiveId, isRead, status, createTime, updateTime, isDelete, remark) VALUES (5, 10003, 10002, 1, 1, '2023-11-19 14:45:39', '2023-11-19 14:45:38', 0, '我是admin');

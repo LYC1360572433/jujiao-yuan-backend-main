@@ -8,5 +8,10 @@ public interface FileConstant {
     /**
      * COS 访问地址
      */
-    String COS_HOST = "http://120.79.155.15:9000";
+    String COS_HOST = "";
+
+    /**
+     * Minio 访问地址
+     */
+    String Minio_HOST = "http://120.79.155.15:9000";
 }

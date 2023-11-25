@@ -42,6 +42,15 @@ public interface FriendsService extends IService<Friends> {
     boolean agreeToApply(User loginUser, Long fromId);
 
     /**
+     * 拒绝好友
+     *
+     * @param loginUser
+     * @param fromId
+     * @return
+     */
+    boolean rejectToApply(User loginUser, Long fromId);
+
+    /**
      * 撤销好友申请
      *
      * @param id        申请记录id

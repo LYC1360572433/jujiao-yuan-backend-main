@@ -67,7 +67,13 @@ cos:
 #    appKey: xxxx
 #    redirectUrl: xxxx
 
-
+minio:
+  endpoint: http://localhost:9000
+  accessKey: xxxxxxxxx
+  secretKey: xxxxxxxxx
+  bucket:
+    files: mediafiles
+    videofiles: video
 
 
 

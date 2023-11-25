@@ -212,6 +212,34 @@ public class FriendsServiceImpl extends ServiceImpl<FriendsMapper, Friends> impl
     }
 
     @Override
+    public boolean rejectToApply(User loginUser, Long fromId) {
+        // 0. 根据receiveId查询所有接收的申请记录
+        LambdaQueryWrapper<Friends> friendsLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        friendsLambdaQueryWrapper.eq(Friends::getReceiveId, loginUser.getId());
+        friendsLambdaQueryWrapper.eq(Friends::getFromId, fromId);
+        List<Friends> recordCount = this.list(friendsLambdaQueryWrapper);
+        List<Friends> collect = recordCount.stream().filter(f -> f.getStatus() == DEFAULT_STATUS).collect(Collectors.toList());
+        // 条数小于1 就不能再拒绝
+        if (collect.isEmpty()) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "该申请不存在");
+        }
+        if (collect.size() > 1) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "操作有误,请重试");
+        }
+        AtomicBoolean flag = new AtomicBoolean(false);
+        collect.forEach(friend -> {
+            if (DateUtil.between(new Date(), friend.getCreateTime(), DateUnit.DAY) >= 3 || friend.getStatus() == EXPIRED_STATUS) {
+                throw new BusinessException(ErrorCode.PARAMS_ERROR, "该申请已过期");
+            }
+
+            // 2. 修改状态由0改为-1
+            friend.setStatus(REJECT_STATUS);
+            flag.set(this.updateById(friend));
+        });
+        return flag.get();
+    }
+
+    @Override
     public boolean canceledApply(Long id, User loginUser) {
         Friends friend = this.getById(id);
         if (friend.getStatus() != DEFAULT_STATUS) {

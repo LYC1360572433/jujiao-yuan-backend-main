@@ -88,6 +88,19 @@ public class FriendsController {
         return ResultUtil.success(agreeToApplyStatus);
     }
 
+    /**
+     * 拒绝好友申请
+     * @param fromId
+     * @param request
+     * @return
+     */
+    @PostMapping("reject/{fromId}")
+    public BaseResponse<Boolean> rejectToApply(@PathVariable("fromId") Long fromId, HttpServletRequest request) {
+        User loginUser = userService.getLoginUser(request);
+        boolean rejectToApplyStatus = friendsService.rejectToApply(loginUser, fromId);
+        return ResultUtil.success(rejectToApplyStatus);
+    }
+
     @PostMapping("canceledApply/{id}")
     public BaseResponse<Boolean> canceledApply(@PathVariable("id") Long id, HttpServletRequest request) {
         if (id == null) {

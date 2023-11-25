@@ -13,6 +13,10 @@ public interface FriendConstant {
      */
     int AGREE_STATUS = 1;
     /**
+     * 已拒绝
+     */
+    int REJECT_STATUS = -1;
+    /**
      * 已过期
      */
     int EXPIRED_STATUS = 2;

@@ -30,7 +30,7 @@ public class Friends implements Serializable {
      */
     private Long receiveId;
     /**
-     * 申请状态 默认0 （0-未通过 1-已同意 2-已过期 3-已撤销）
+     * 申请状态 默认0 （0-未通过 -1-已拒绝 1-已同意 2-已过期 3-已撤销）
      */
     private Integer status;
     /**

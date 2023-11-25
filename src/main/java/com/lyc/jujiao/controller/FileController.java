@@ -7,12 +7,14 @@ import com.lyc.jujiao.common.ResultUtil;
 import com.lyc.jujiao.contant.FileConstant;
 import com.lyc.jujiao.exception.BusinessException;
 import com.lyc.jujiao.manager.CosManager;
+import com.lyc.jujiao.manager.MinioManager;
 import com.lyc.jujiao.model.entity.User;
 import com.lyc.jujiao.model.enums.FileUploadBizEnum;
 import com.lyc.jujiao.model.file.UploadFileRequest;
 import com.lyc.jujiao.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,8 +38,16 @@ public class FileController {
     final long ONE_M = 1024 * 1024L;
     @Resource
     private UserService userService;
+//    @Resource
+//    private CosManager cosManager;
+
     @Resource
-    private CosManager cosManager;
+    private MinioManager minioManager;
+
+    //存储普通文件
+    @Value("${minio.bucket.files}")
+    private String bucket_mediafiles;
+
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
 
@@ -67,9 +77,11 @@ public class FileController {
             // 上传文件
             file = File.createTempFile(filepath, null);
             multipartFile.transferTo(file);
-            cosManager.putObject(filepath, file);
+            String absolutePath = file.getAbsolutePath();
+//            cosManager.putObject(filepath, file);
+            minioManager.upload(absolutePath,file,filename);
             // 返回可访问地址
-            return ResultUtil.success(FileConstant.COS_HOST + filepath);
+            return ResultUtil.success(FileConstant.Minio_HOST + "/" + bucket_mediafiles + "/" + filename);
         } catch (Exception e) {
             log.error("file upload error, filepath = " + filepath, e);
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "上传失败");

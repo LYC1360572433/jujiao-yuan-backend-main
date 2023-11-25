@@ -4,45 +4,57 @@
 
 [TOC]
 
-**本站地址：[聚交园](https://qimuu.icu/)**
+**本站地址：[聚交园](http://120.79.155.15:82/)**
 
-**前端地址： https://github.com/qimu666/jujiao-garden-frontend**
+**前端地址： https://github.com/LYC1360572433/jujiao-garden-frontend-main**
 
-**后端地址： https://github.com/qimu666/jujiao-yuan-backend**
-
-🙏🏻 **大家喜欢这个项目的话，感谢动手点点 star**
+**后端地址： https://github.com/LYC1360572433/jujiao-yuan-backend-main**
 
 ## 界面展示
 
 ### 用户登录/注册
 
-<img src="https://img.qimuu.icu/typory/1682669065657.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897611478.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897622756.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 好友列表/好友申请
 
-<img src="https://img.qimuu.icu/typory/1682669704355.png" alt="1682669704355" style="zoom: 50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897750603.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897759889.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897780241.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 在线聊天
 
-![1682670682772](https://img.qimuu.icu/typory/1682670682772.png)
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897797355.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897832955.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897871655.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 用户推荐页
 
-<img src="https://img.qimuu.icu/typory/%E7%94%A8%E6%88%B7%E6%8E%A8%E8%8D%90.png" alt="用户推荐" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897653532.png" alt="1682669065657" style="zoom:50%;" />
+
+### 搜索栏
+
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897664026.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 根据标签搜索用户
 
-<img src="https://img.qimuu.icu/typory/%E6%A0%87%E7%AD%BE%E6%90%9C%E7%B4%A2.png" alt="标签搜索" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897929361.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 队伍页
 
-<img src="https://img.qimuu.icu/typory/%E9%98%9F%E4%BC%8D%E9%A1%B5.png" alt="队伍页" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897945145.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897950457.png" alt="1682669065657" style="zoom:50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897955978.png" alt="1682669065657" style="zoom:50%;" />
+
+### 查看队伍
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897979098.png" alt="1682669065657" style="zoom:50%;" />
 
 ### 个人中心页
 
-<img src="https://img.qimuu.icu/typory/%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E9%A1%B5.png" alt="个人中心页" style="zoom: 50%;" />
+<img src="http://120.79.155.15:9000/jujiaoyuan/1700897988753.png" alt="1682669065657" style="zoom:50%;" />
 
-**详细界面见：** [聚交园](https://qimuu.icu/) 或doc目录
+**详细界面见：** [聚交园](http://120.79.155.15:82/) 
 
 ## 项目描述
 
